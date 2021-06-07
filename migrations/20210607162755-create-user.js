@@ -70,7 +70,7 @@ module.exports = {
       channel_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        // referencing to user table
+        // referencing to channel table
         referrences: {
           model: "channel",
           key: "id",
