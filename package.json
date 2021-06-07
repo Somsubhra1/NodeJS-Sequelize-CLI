@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "make-model": "npx sequelize-cli model:generate --name user --attributes email:string",
     "migrate": "npx sequelize-cli db:migrate",
-    "down": "npx sequelize-cli db:migrate:undo"
+    "down": "npx sequelize-cli db:migrate:undo",
+    "make-seed": "npx sequelize-cli seed:generate --name demo-user",
+    "seed": "npx sequelize-cli db:seed:all"
   },
   "keywords": [],
   "author": "",
