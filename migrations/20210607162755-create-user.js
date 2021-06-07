@@ -37,6 +37,16 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      // Foreign key
+      user_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        // referencing to user table
+        referrences: {
+          model: "user",
+          key: "id",
+        },
+      },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -45,7 +55,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
-      
     });
     await queryInterface.createTable("video", {
       id: {
@@ -57,6 +66,15 @@ module.exports = {
       title: {
         type: Sequelize.STRING,
         allowNull: false,
+      },
+      channel_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        // referencing to user table
+        referrences: {
+          model: "channel",
+          key: "id",
+        },
       },
       created_at: {
         allowNull: false,
